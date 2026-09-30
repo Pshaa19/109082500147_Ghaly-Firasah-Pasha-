@@ -27,16 +27,11 @@ int main() {
 ```
 ### Output Unguided 1 :
 
-##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-contoh :
-![Screenshot Output Unguided 1_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided1-1.png)
-
-##### Output 2
-![Screenshot Output Unguided 1_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+##### Output 
+![Screenshot Output Unguided 1](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%201/Output/Screenshot%20Output%20Unguided%201.png)
 
 penjelasan unguided 1 
+Program C++ ini menerima dua masukan bilangan pecahan (float) dari pengguna melalui perintah cin. Selanjutnya, program menghitung serta menampilkan hasil penjumlahan, pengurangan, perkalian, dan pembagian dari kedua bilangan tersebut secara berurutan.
 
 ### 2. Buatlah sebuah program yang menerima masukan angka dan mengeluarkan output nilai angka tersebut dalam bentuk tulisan. Angka yang akan di-input-kan user adalah bilangan bulat positif mulai dari 0 s.d 100
 
@@ -74,16 +69,11 @@ int main() {
 ```
 ### Output Unguided 2 :
 
-##### Output 1
-![Screenshot Output Unguided 2_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-contoh :
-![Screenshot Output Unguided 2_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided2-1.png)
-
-##### Output 2
-![Screenshot Output Unguided 2_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+##### Output 
+![Screenshot Output Unguided 2](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%201/Output/Screenshot%20Output%20Unguided%202.png)
 
 penjelasan unguided 2
+Program C++ ini menerima masukan bilangan bulat dari pengguna untuk dikonversi menjadi sebutan teks terbilang dalam rentang 0 hingga 100. Menggunakan struktur percabangan if-else dan array kata dasar, program mengecek rentang nilai angka tersebut lalu mencetak hasil konversinya secara tepat.
 
 ### 3. Buatlah program yang dapat memberikan input dan output sbb.
 
@@ -118,19 +108,14 @@ int main() {
 ```
 ### Output Unguided 3 :
 
-##### Output 1
-![Screenshot Output Unguided 3_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-contoh :
-![Screenshot Output Unguided 3_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided3-1.png)
-
-##### Output 2
-![Screenshot Output Unguided 3_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+##### Output 
+![Screenshot Output Unguided 3](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%201/Output/Screenshot%20Output%20Unguided%203.png)
 
 penjelasan unguided 3
+Program C++ ini mencetak pola angka simetris berbentuk piramida terbalik dengan pusat karakter bintang * berdasarkan masukan nilai n. Menggunakan struktur perulangan bersarang, program mengatur jumlah spasi di setiap baris serta mencetak urutan angka menurun di sebelah kiri dan menaik di sebelah kanan.
 
 ## Kesimpulan
-...
+Ketiga program C++ ini mengimplementasikan konsep dasar pemrograman, dimulai dari penggunaan operator aritmatika untuk memproses tipe data float. Program kedua mengembangkan logika alur program melalui struktur percabangan dan array untuk mengonversi nilai angka menjadi teks terbilang. Program ketiga menerapkan perulangan bersarang guna memanipulasi spasi dan penulisan karakter dalam membentuk pola angka simetris. 
 
 ## Referensi
 [1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
