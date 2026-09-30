@@ -2,51 +2,28 @@
 <p align="center">Ghaly Firasah Pasha - 109082500147</p>
 
 ## Dasar Teori
-isi dengan penjelasan dasar teori disertai referensi jurnal (gunakan kurung siku [] untuk pernyataan yang mengambil refernsi dari jurnal).
-contoh :
-Linked list atau yang disebut juga senarai berantai adalah Salah satu bentuk struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling bersambungan, dinamis, dan terbatas[1]. Linked list terdiri dari sejumlah node atau simpul yang dihubungkan secara linier dengan bantuan pointer.
-
-### A. ...<br/>
-...
-#### 1. ...
-#### 2. ...
-#### 3. ...
-
-### B. ...<br/>
-...
-#### 1. ...
-#### 2. ...
-#### 3. ...
-
-## Guided 
-
-### 1. ...
-
-```C++
-source code guided 1
-```
-penjelasan singkat guided 1
-
-### 2. ...
-
-```C++
-source code guided 2
-```
-penjelasan singkat guided 2
-
-### 3. ...
-
-```C++
-source code guided 3
-```
-penjelasan singkat guided 3
+Code Blocks merupakan kakas Integrated Development Environment (IDE) bersifat free, open-source, dan cross-platform yang berorientasi pada bahasa pemrograman C, C++, dan Fortran. Bahasa C++ diciptakan oleh Bjarne Stroustrup pada awal tahun 1980-an sebagai bentuk penyempurnaan bahasa C ANSI yang mendukung berbagai tipe data dasar seperti char, int, long, float, dan double. Alur eksekusi program C++ diatur melalui fungsi kondisional maupun perulangan, serta didukung oleh penggunaan struktur (struct) untuk mengelompokkan data berlainan tipe.
 
 ## Unguided 
 
-### 1. (isi dengan soal unguided 1)
+### 1. Buatlah program yang menerima input-an dua buah bilangan betipe float, kemudian memberikan output-an hasil penjumlahan, pengurangan, perkalian, dan pembagian dari dua bilangan tersebut.
 
 ```C++
-source code unguided 1
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a, b;
+
+    cin >> a >> b;
+
+    cout << a + b << endl;
+    cout << a - b << endl;
+    cout << a * b << endl;
+    cout << a / b << endl;
+
+    return 0;
+}
 ```
 ### Output Unguided 1 :
 
@@ -61,10 +38,39 @@ contoh :
 
 penjelasan unguided 1 
 
-### 2. (isi dengan soal unguided 2)
+### 2. Buatlah sebuah program yang menerima masukan angka dan mengeluarkan output nilai angka tersebut dalam bentuk tulisan. Angka yang akan di-input-kan user adalah bilangan bulat positif mulai dari 0 s.d 100
 
 ```C++
-source code unguided 2
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int angka;
+    cin >> angka;
+
+    string kata[] = {"", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan", "sepuluh", "sebelas"};
+
+    cout << angka << " : ";
+
+    if (angka == 0) {
+        cout << "nol";
+    } else if (angka < 12) {
+        cout << kata[angka];
+    } else if (angka < 20) {
+        cout << kata[angka - 10] << " belas";
+    } else if (angka < 100) {
+        cout << kata[angka / 10] << " puluh";
+        if (angka % 10 != 0) {
+            cout << " " << kata[angka % 10];
+        }
+    } else if (angka == 100) {
+        cout << "seratus";
+    }
+
+    cout << endl;
+    return 0;
+}
 ```
 ### Output Unguided 2 :
 
@@ -79,10 +85,36 @@ contoh :
 
 penjelasan unguided 2
 
-### 3. (isi dengan soal unguided 3)
+### 3. Buatlah program yang dapat memberikan input dan output sbb.
 
 ```C++
-source code unguided 3
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    
+    cout << "input: ";
+    cin >> n;
+    cout << "output:" << endl;
+    
+    for (int i = n; i >= 0; i--) {
+        for (int s = 0; s < (n - i) * 2; s++) {
+            cout << " ";
+        }
+        
+        for (int j = i; j >= 1; j--) {
+            cout << j << " ";
+        }
+        cout << "*";
+        
+        for (int j = 1; j <= i; j++) {
+            cout << " " << j;
+        }
+        cout << endl;
+    }
+    return 0;
+}
 ```
 ### Output Unguided 3 :
 
