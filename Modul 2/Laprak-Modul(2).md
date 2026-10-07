@@ -541,7 +541,7 @@ int main() {
 Program ini menggunakan fungsi cariMaksimum dan cariMinimum yang mengembalikan nilai integer ekstrem dari array arrA, serta prosedur hitungRataRata untuk menghitung nilai rata-rata elemennya. Pengalihan eksekusi program diatur oleh struktur switch-case yang menjalankan fungsi atau prosedur sesuai angka pilihan menu yang diinput oleh pengguna. Melalui parameter array yang dilewatkan ke setiap fungsi dan prosedur, data arrA dapat diolah secara terstruktur tanpa perlu menuliskan perulangan secara berulang di dalam fungsi main.
 
 ## Kesimpulan
-...
+Seluruh program mengimplementasikan konsep dasar C++ seperti array, pointer, serta fungsi dan prosedur terstruktur. Penggunaan array satu dan dua dimensi mempermudah penyimpanan serta pengolahan sekumpulan data bernilai sama seperti matriks dan deret angka. Penerapan metode pengiriman parameter (value, pointer, reference) menentukan apakah perubahan variabel di dalam fungsi akan memengaruhi nilai variabel aslinya pada fungsi utama. Sementara itu, integrasi fungsi terpisah dan kontrol percabangan switch-case menghasilkan program yang rapi, modular, dan mudah dikembangkan
 
 ## Referensi
 [1] Tim Dosen Struktur Data. (2024). Modul 2: Pengenalan Bahasa C++ (Bagian Kedua). Laboratorium Informatika, Fakultas Informatika, Telkom University.
