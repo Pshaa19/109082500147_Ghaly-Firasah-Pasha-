@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-//poniter
+//pointer
 void tukar(int *x, int *y, int *z) {
     int temp = *x;
     *x = *y;

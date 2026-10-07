@@ -401,7 +401,7 @@ contoh :
 
 Program ini menggunakan prosedur (void) terpisah untuk menghitung penjumlahan, pengurangan, dan perkalian dua buah matriks 3x3 yang disimpan dalam array dua dimensi. Penggunaan prosedur cetakMatrix secara berulang membantu memperkasing penulisan kode saat menampilkan setiap hasil operasi ke layar. Selain itu, manipulasi data matriks di dalam prosedur langsung memperbarui variabel hasil pada fungsi main karena pengiriman array sebagai parameter mengacu pada alamat memori yang sama.
 
-### 2. (isi dengan soal unguided 2)
+### 2. Berdasarkan guided pointer dan reference sebelumnya, buatlah keduanya dapat menukar nilai dari 3 variabel 
 
 ```C++
 source code unguided 2
