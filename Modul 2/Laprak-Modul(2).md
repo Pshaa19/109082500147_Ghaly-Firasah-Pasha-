@@ -391,51 +391,154 @@ int main() {
 ### Output Unguided 1 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
 
-contoh :
-![Screenshot Output Unguided 1_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided1-1.png)
-
-##### Output 2
-![Screenshot Output Unguided 1_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+![Screenshot Output Unguided 1](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%202/Output/output%20unguided1.png)
 
 Program ini menggunakan prosedur (void) terpisah untuk menghitung penjumlahan, pengurangan, dan perkalian dua buah matriks 3x3 yang disimpan dalam array dua dimensi. Penggunaan prosedur cetakMatrix secara berulang membantu memperkasing penulisan kode saat menampilkan setiap hasil operasi ke layar. Selain itu, manipulasi data matriks di dalam prosedur langsung memperbarui variabel hasil pada fungsi main karena pengiriman array sebagai parameter mengacu pada alamat memori yang sama.
 
 ### 2. Berdasarkan guided pointer dan reference sebelumnya, buatlah keduanya dapat menukar nilai dari 3 variabel 
 
 ```C++
-source code unguided 2
+#include <iostream>
+using namespace std;
+
+//pointer
+void tukar(int *x, int *y, int *z) {
+    int temp = *x;
+    *x = *y;
+    *y = *z;
+    *z = temp;
+}
+
+int main() {
+    int a = 10, b = 20, c = 30;
+
+    cout << "Sebelum ditukar:" << endl;
+    cout << "a = " << a << ", b = " << b << ", c = " << c << endl;
+
+    tukar(&a, &b, &c);
+
+    cout << "\nSetelah ditukar:" << endl;
+    cout << "a = " << a << ", b = " << b << ", c = " << c << endl;
+
+    return 0;
+}
+
+//reference
+void tukar(int &x, int &y, int &z) {
+    int temp = x;
+    x = y;
+    y = z;
+    z = temp;
+}
+
+int main() {
+    int a = 10, b = 20, c = 30;
+
+    cout << "Sebelum ditukar:" << endl;
+    cout << "a = " << a << ", b = " << b << ", c = " << c << endl;
+
+    tukar(a, b, c);
+
+    cout << "\nSetelah ditukar:" << endl;
+    cout << "a = " << a << ", b = " << b << ", c = " << c << endl;
+
+    return 0;
+}
 ```
 ### Output Unguided 2 :
 
 ##### Output 1
-![Screenshot Output Unguided 2_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-contoh :
-![Screenshot Output Unguided 2_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided2-1.png)
+![Screenshot Output Unguided 2_1](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%202/Output/output%20unguided2_1.png)
 
 ##### Output 2
-![Screenshot Output Unguided 2_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+![Screenshot Output Unguided 2_2](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%202/Output/output%20unguided2_2.png)
 
-penjelasan unguided 2
+Kedua program di atas menggunakan prosedur tukar yang menggeser nilai variabel a ke b, b ke c, dan c kembali ke a menggunakan variabel bantuan temp. Pada versi pointer, fungsi mengakses alamat memori variabel secara langsung menggunakan operator * dan dipanggil dengan &, sedangkan pada versi reference, fungsi menggunakan simbol & pada parameternya sehingga dapat diakses seperti variabel biasa. Kedua metode ini sama-sama berhasil mengubah nilai variabel asli pada fungsi main karena manipulasi dilakukan langsung pada lokasi memori variabel tersebut.
 
-### 3. (isi dengan soal unguided 3)
+### 3. Diketahui sebuah array 1 dimensi sebagai berikut : arrA = {11, 8, 5, 7, 12, 26, 3, 54, 33, 55} Buatlah program yang dapat mencari nilai minimum, maksimum, dan rata – rata dari array tersebut! Gunakan function cariMinimum() untuk mencari nilai minimum dan function cariMaksimum() untuk mencari nilai maksimum, serta gunakan prosedur hitungRataRata() untuk menghitung nilai rata – rata! Buat program menggunakan menu switch-case seperti berikut ini :                                                                                         --- Menu Program Array --- • Tampilkan isi array • cari nilai maksimum • cari nilai minimum • Hitung nilai rata - rata
 
 ```C++
-source code unguided 3
+#include <iostream>
+using namespace std;
+
+int cariMinimum(int arr[], int n) {
+    int minVal = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < minVal) {
+            minVal = arr[i];
+        }
+    }
+    return minVal;
+}
+
+int cariMaksimum(int arr[], int n) {
+    int maxVal = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > maxVal) {
+            maxVal = arr[i];
+        }
+    }
+    return maxVal;
+}
+
+void hitungRataRata(int arr[], int n) {
+    float total = 0;
+    for (int i = 0; i < n; i++) {
+        total += arr[i];
+    }
+    cout << "Rata - rata = " << total / n << endl;
+}
+
+void tampilkanArray(int arr[], int n) {
+    cout << "Isi Array: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    int arrA[10] = {11, 8, 5, 7, 12, 26, 3, 54, 33, 55};
+    int n = 10;
+    int pilihan;
+
+    cout << "--- Menu Program Array ---" << endl;
+    cout << "1. Tampilkan isi array" << endl;
+    cout << "2. cari nilai maksimum" << endl;
+    cout << "3. cari nilai minimum" << endl;
+    cout << "4. Hitung nilai rata - rata" << endl;
+    cout << "Pilihan: ";
+    cin >> pilihan;
+
+    cout << endl;
+
+    switch (pilihan) {
+        case 1:
+            tampilkanArray(arrA, n);
+            break;
+        case 2:
+            cout << "Nilai maksimum = " << cariMaksimum(arrA, n) << endl;
+            break;
+        case 3:
+            cout << "Nilai minimum = " << cariMinimum(arrA, n) << endl;
+            break;
+        case 4:
+            hitungRataRata(arrA, n);
+            break;
+        default:
+            cout << "Pilihan tidak valid!" << endl;
+    }
+
+    return 0;
+}
 ```
 ### Output Unguided 3 :
 
 ##### Output 1
-![Screenshot Output Unguided 3_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+![Screenshot Output Unguided 3_1](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%202/Output/output%20unguided3.png)
 
-contoh :
-![Screenshot Output Unguided 3_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided3-1.png)
-
-##### Output 2
-![Screenshot Output Unguided 3_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-penjelasan unguided 3
+Program ini menggunakan fungsi cariMaksimum dan cariMinimum yang mengembalikan nilai integer ekstrem dari array arrA, serta prosedur hitungRataRata untuk menghitung nilai rata-rata elemennya. Pengalihan eksekusi program diatur oleh struktur switch-case yang menjalankan fungsi atau prosedur sesuai angka pilihan menu yang diinput oleh pengguna. Melalui parameter array yang dilewatkan ke setiap fungsi dan prosedur, data arrA dapat diolah secara terstruktur tanpa perlu menuliskan perulangan secara berulang di dalam fungsi main.
 
 ## Kesimpulan
 ...
