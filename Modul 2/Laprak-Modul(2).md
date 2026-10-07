@@ -58,68 +58,335 @@ int main() {
 ```
 Kode ini menginisialisasi sebuah array satu dimensi bernama nilai bertipe integer dengan ukuran 5 elemen yang masing-masing diisi angka tertentu. Selanjutnya, perulangan for digunakan untuk mencetak seluruh isi array tersebut beserta nomor urutnya ke layar secara berurutan.
 
-### 2. ...
+### 2. Array 2
 
 ```C++
-source code guided 2
-```
-penjelasan singkat guided 2
+#include <iostream>
+using namespace std;
 
-### 3. ...
+int main() {
+    int nilai[3][3] = {
+        {80, 75, 90},
+        {85, 90, 88},
+        {70, 80, 85}
+    };
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << nilai[i][j] << " ";
+        }
+        
+        cout << endl;
+    }
+    cout << endl;
+    cout << nilai[1][2] << endl; 
+    return 0;
+}
+```
+Kode ini mendeklarasikan dan menginisialisasi array dua dimensi berukuran 3x3 yang berisi kumpulan nilai integer. Selanjutnya, program menampilkan seluruh elemen array dalam bentuk matriks menggunakan perulangan bersarang, lalu mencetak elemen pada baris ke-2 kolom ke-3 (indeks [1][2]) yaitu angka 88.
+
+### 3. Array 3
 
 ```C++
-source code guided 3
-```
-penjelasan singkat guided 3
+#include <iostream>
+using namespace std;
 
-### 4. ...
+int main() {
+    int data[2][2][3] = {
+        {
+            {10, 20, 30},
+            {40, 50, 60}
+        },
+        {
+            {70, 80, 90},
+            {100, 110, 120}
+        }
+    };
+
+    cout << data[0][1][2] << endl;
+
+    return 0; 
+}
+```
+Kode ini mendeklarasikan dan menginisialisasi array tiga dimensi berukuran 2x2x3 yang menyimpan sekumpulan data integer. Selanjutnya, program mengakses dan mencetak elemen pada blok pertama, baris kedua, dan kolom ketiga (indeks [0][1][2]), yaitu nilai 60.
+
+### 4. Address
 
 ```C++
-source code guided 3
-```
-penjelasan singkat guided 3
+#include <iostream>
+using namespace std;
 
-### 5. ...
+int main() {
+    int angka = 100;
+
+    cout << "Nilai angka = " << angka << endl;
+    cout << "Alamat angka = " << &angka << endl;
+
+    return 0;
+}
+```
+Kode ini mendeklarasikan sebuah variabel integer angka bernilai 100, lalu menampilkan nilai tersebut serta alamat memorinya di RAM ke layar. Penggunaan operator & sebelum nama variabel digunakan untuk mengambil dan mencetak alamat lokasi memori tempat variabel angka tersimpan.
+
+### 5. Pointer 1
 
 ```C++
-source code guided 3
-```
-penjelasan singkat guided 3
+#include <iostream>
+using namespace std;
 
-### 6. ...
+int main() {
+    char arr[6];
+
+    arr[0] = 'a';
+    arr[1] = 'b';
+    arr[2] = 'c';
+    arr[3] = 'b';
+    arr[4] = 'd';
+    arr[5] = 'e';
+
+    cout << arr[3] << endl; //value
+    cout << &(arr[4]) << endl; //alamat memory atau address
+
+    return 0;
+}
+```
+Kode ini menginisialisasi array karakter arr berukuran 6 elemen dan mengisinya dengan karakter 'a' hingga 'e'. Selanjutnya, program mencetak nilai karakter pada indeks ke-3 (yaitu 'b') serta alamat memori tempat elemen indeks ke-4 tersimpan menggunakan operator &.
+
+### 6. Pointer 2
 
 ```C++
-source code guided 3
-```
-penjelasan singkat guided 3
+#include <iostream>
+using namespace std;
 
-### 7. ...
+int main() {
+    int angka = 100;
+    int *pointer;
+
+    pointer = &angka;
+
+    cout << "Nilai angka         : " << angka << endl; //100
+    cout << "Alamat angka        : " << &angka << endl; //address 
+    cout << "Isi pointer         : " << pointer << endl; //address angka 
+    cout << "Nilai dari pointer  : " << *pointer << endl; //value dari angka yaitu 100
+
+    return 0;
+}
+```
+Kode ini mendeklarasikan variabel integer angka bernilai 100 dan sebuah pointer pointer yang diisi dengan alamat memori dari angka. Selanjutnya, program menampilkan nilai angka, alamat memori angka, nilai yang tersimpan di dalam pointer (alamat angka), serta nilai yang ditunjuk oleh pointer menggunakan operator dereference (*) yang menghasilkan nilai 100.
+
+### 7. Function
 
 ```C++
-source code guided 3
-```
-penjelasan singkat guided 3
+#include <iostream>
+using namespace std;
 
-### 8. ...
+int maks3(int a, int b, int c) {
+    int temp_max = a;
+
+    if (b > temp_max) {
+        temp_max = b;
+    }
+
+    if(c > temp_max) {
+        temp_max = c;
+    }
+    return temp_max;
+}
+
+int main() {
+    int x, y, z;
+
+    cout << "Masukkan nilai 1: ";
+    cin >> x;
+    cout << "Masukkan nilai 2: ";
+    cin >> y;
+    cout << "Masukkan nilai 3: ";
+    cin >> z;
+
+    cout << "Nilai maksimum = " 
+         << maks3(x, y, z);
+
+    return 0;
+}
+```
+Kode ini mendefinisikan fungsi maks3 yang menerima tiga parameter integer untuk menentukan nilai terbesar melalui serangkaian pengecekan kondisi if. Pada fungsi main, program menerima tiga input nilai dari pengguna, memanggil fungsi maks3, lalu menampilkan hasil nilai maksimum tersebut ke layar.
+
+### 8. Procedure
 
 ```C++
-source code guided 3
-```
-penjelasan singkat guided 3
+#include <iostream>
+using namespace std;
 
-### 9. ...
+void sapa() {
+    cout << "Selamat datang di Praktikum Struktur Data" << endl;
+}
+
+int main() {
+    sapa();
+    return 0;
+}
+```
+Kode ini mendefinisikan sebuah prosedur (fungsi void) bernama sapa() yang bertugas mencetak teks pesan penyambutan ke layar. Pada fungsi main(), prosedur sapa() dipanggil sehingga pesan "Selamat datang di Praktikum Struktur Data" ditampilkan saat program dijalankan.
+
+### 9. Call By Value, Pointer & Reference
 
 ```C++
-source code guided 3
+#include <iostream>
+using namespace std;
+
+//call by value
+void tukar(int x, int y) {
+    int temp;
+
+    temp = x;
+    x = y;
+    y = temp;
+}
+
+int main() {
+    int a = 4;
+    int b = 6;
+
+    cout << "Sebelum ditukar: " << endl;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+
+    tukar(a, b);
+
+    cout <<"\nSetelah ditukar:" << endl;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+
+    return 0;
+}
+
+//call by pointer
+void tukar(int *x, int *y) {
+    int temp;
+
+    temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+int main() {
+    int a = 4;
+    int b = 6;
+
+    cout << "Sebelum ditukar: " << endl;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+
+    tukar(&a, &b);
+
+    cout <<"\nSetelah ditukar:" << endl;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+
+    return 0;
+}
+
+//call by reference
+void tukar(int &x, int &y) {
+    int temp;
+
+    temp = x;
+    x = y;
+    y = temp;
+}
+
+int main() {
+    int a = 4;
+    int b = 6;
+
+    cout << "Sebelum ditukar: " << endl;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+
+    tukar(a, b);
+
+    cout <<"\nSetelah ditukar:" << endl;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+
+    return 0;
+}
 ```
-penjelasan singkat guided 3
+Pada metode Call by Value, nilai dari parameter aktual disalin ke parameter formal, sehingga perubahan nilai di dalam fungsi tidak akan memengaruhi variabel aslinya di luar fungsi. Pada metode Call by Pointer, fungsi menerima alamat memori menggunakan pointer (*) dan dipanggil menggunakan operator alamat (&), sehingga perubahan di dalam fungsi akan langsung mengubah variabel aslinya. Sementara itu, metode Call by Reference memiliki dampak yang sama dengan pointer dalam mengubah variabel asli, namun dengan sintaks pemanggilan yang lebih sederhana karena tidak memerlukan operator tambahan saat fungsi dipanggil.
 
 ## Unguided 
 
-### 1. (isi dengan soal unguided 1)
+### 1. Buatlah program yang dapat melakukan operasi penjumlahan, pengurangan, dan perkalian matriks 3x3 
 
 ```C++
-source code unguided 1
+#include <iostream>
+#define SIZE 3
+using namespace std;
+
+void tambahMatrix(int matA[SIZE][SIZE], int matB[SIZE][SIZE], int hasil[SIZE][SIZE]) {
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+            hasil[i][j] = matA[i][j] + matB[i][j];
+        }
+    }
+}
+
+void kurangMatrix(int matA[SIZE][SIZE], int matB[SIZE][SIZE], int hasil[SIZE][SIZE]) {
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+            hasil[i][j] = matA[i][j] - matB[i][j];
+        }
+    }
+}
+
+void kaliMatrix(int matA[SIZE][SIZE], int matB[SIZE][SIZE], int hasil[SIZE][SIZE]) {
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+            hasil[i][j] = 0;
+            for (int k = 0; k < SIZE; k++) {
+                hasil[i][j] += matA[i][k] * matB[k][j];
+            }
+        }
+    }
+}
+
+void cetakMatrix(int mat[SIZE][SIZE]) {
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+            cout << mat[i][j] << "\t";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int A[SIZE][SIZE] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    int B[SIZE][SIZE] = {
+        {9, 8, 7},
+        {6, 5, 4},
+        {3, 2, 1}
+    };
+
+    int hasil[SIZE][SIZE];
+
+    cout << "=== Penjumlahan ===" << endl;
+    tambahMatrix(A, B, hasil);
+    cetakMatrix(hasil);
+
+    cout << "\n=== Pengurangan ===" << endl;
+    kurangMatrix(A, B, hasil);
+    cetakMatrix(hasil);
+
+    cout << "\n=== Perkalian ===" << endl;
+    kaliMatrix(A, B, hasil);
+    cetakMatrix(hasil);
+
+    return 0;
+}
 ```
 ### Output Unguided 1 :
 
@@ -132,7 +399,7 @@ contoh :
 ##### Output 2
 ![Screenshot Output Unguided 1_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
 
-penjelasan unguided 1 
+Program ini menggunakan prosedur (void) terpisah untuk menghitung penjumlahan, pengurangan, dan perkalian dua buah matriks 3x3 yang disimpan dalam array dua dimensi. Penggunaan prosedur cetakMatrix secara berulang membantu memperkasing penulisan kode saat menampilkan setiap hasil operasi ke layar. Selain itu, manipulasi data matriks di dalam prosedur langsung memperbarui variabel hasil pada fungsi main karena pengiriman array sebagai parameter mengacu pada alamat memori yang sama.
 
 ### 2. (isi dengan soal unguided 2)
 
