@@ -348,12 +348,12 @@ int main() {
 ### Output Unguided 3 :
 
 ##### Output 
-![Screenshot Output Unguided 3]()
+![Screenshot Output Unguided 3](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%203/Output/output%20unguided%203.png)
 
 Program ini mengimplementasikan konsep Abstract Data Type (ADT) untuk mengelola array 2D berukuran 3x3 dan variabel pointer dengan membagi kode ke dalam modul spesifikasi (tukar.h), modul realisasi (tukar.cpp), dan program utama (main.cpp). Di dalam file header dan body, didefinisikan berbagai fungsi dan prosedur primitif untuk menampilkan isi matriks, menukar elemen array 2D pada posisi tertentu, serta menukar nilai variabel yang ditunjuk oleh pointer. File main.cpp bertindak sebagai driver yang mengeksekusi seluruh operasi tersebut dan menampilkan perubahan data matriks maupun pointer ke perangkat keluaran secara terstruktur.
 
 ## Kesimpulan
-...
+Seluruh program yang dibuat berhasil menerapkan konsep Abstract Data Type (ADT) dengan memisahkan struktur data dan fungsi ke dalam modul spesifikasi, modul realisasi, dan program utama. Pendekatan modular ini mencakup implementasi pengelolaan data mahasiswa, entitas pelajaran, hingga manipulasi array 2D dan pointer secara terstruktur dan terorganisir. Penggunaan konstruktor, selector, serta fungsi dan prosedur primitif memastikan bahwa operasi dasar terhadap tipe data dapat dieksekusi dengan baik tanpa mengekspos detail implementasi internal. Melalui praktikum ini, konsep pemrograman prosedural terbukti dapat meningkatkan keterbacaan, keamanan data, serta kemudahan pemeliharaan kode program secara keseluruhan.
 
 ## Referensi
 [1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
