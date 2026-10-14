@@ -73,7 +73,7 @@ Program ini mengimplementasikan konsep Abstract Data Type (ADT) untuk mengelola 
 
 ## Unguided 
 
-### 1. Buat program yang dapat menyimpan data mahasiswa (max. 10) ke dalam sebuah array dengan field nama, nim, uts, uas, tugas, dan nilai akhir. Nilai akhir diperoleh dari FUNGSI dengan rumus 0.3*uts+0.4*uas+0.3*tugas.
+### 1. Buat program yang dapat menyimpan data mahasiswa (max. 10) ke dalam sebuah array dengan field nama, nim, uts, uas, tugas, dan nilai akhir. Nilai akhir diperoleh dari FUNGSI dengan rumus 0.3 * uts+0.4 * uas+0.3*tugas.
 
 ```C++
 //header
@@ -192,7 +192,7 @@ int main() {
 ### Output Unguided 1 :
 
 ##### Output 
-![Screenshot Output Unguided 1]()
+![Screenshot Output Unguided 1](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%203/Output/output%20unguided%201.png)
 
 Program ini mengimplementasikan konsep Abstract Data Type (ADT) untuk mengelola data mahasiswa ke dalam array dengan memisahkan kode menjadi tiga file utama, yaitu file header, file body, dan program utama. File header dan body bertugas mendefinisikan struktur data mahasiswa beserta fungsi dan prosedur primitif seperti perhitungan nilai akhir dan penginputan data. Sementara itu, file program utama berfungsi sebagai driver untuk menjalankan alur program serta menampilkan rekapitulasi nilai mahasiswa secara terstruktur.
 
@@ -251,7 +251,7 @@ int main() {
 ### Output Unguided 2 :
 
 ##### Output 
-![Screenshot Output Unguided 2]()
+![Screenshot Output Unguided 2](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%203/Output/output%20unguided%202.png)
 
 Program ini mengimplementasikan konsep Abstract Data Type (ADT) untuk membuat dan menampilkan data pelajaran dengan memisahkan struktur kode ke dalam modul spesifikasi (pelajaran.h), modul realisasi (pelajaran.cpp), dan program utama (main.cpp). Di dalam file header dan body, didefinisikan tipe data struktur pelajaran beserta fungsi konstruktor create_pelajaran dan prosedur untuk mengelola data pelajaran. File main.cpp bertindak sebagai program driver yang mengeksekusi fungsi pembentukan data pelajaran dan menampilkan hasilnya ke perangkat keluaran sesuai dengan ketentuan praktikum.
 
