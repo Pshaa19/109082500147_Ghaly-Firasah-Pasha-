@@ -368,7 +368,7 @@ int main() {
 ### Output Unguided 1 :
 
 ##### Output 1
-![Screenshot Output Unguided 1]()
+![Screenshot Output Unguided 1](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%204/output/output%20unguided%201.png)
 
 Program ini mengimplementasikan struktur data Singly Linked List dalam C++ yang terbagi menjadi file header, file implementasi, dan program utama. Sistem menyediakan operasi primitif seperti pembuatan list, alokasi memori, dealokasi, penambahan elemen di awal (insertFirst), serta pencetakan elemen. Melalui fungsi utama (main), program menyisipkan data secara berurutan untuk menampilkan output nilai sesuai dengan ketentuan modul praktikum.
 
@@ -535,7 +535,7 @@ int main() {
 ### Output Unguided 2 :
 
 ##### Output 1
-![Screenshot Output Unguided 2]()
+![Screenshot Output Unguided 2](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%204/output/output%20unguided%202.png)
 
 Program ini mengimplementasikan operasi penghapusan node seperti deleteFirst, deleteLast, dan deleteAfter pada struktur data Singly Linked List. Fungsi nbList dan deleteList digunakan untuk menghitung sisa node serta menghapus seluruh elemen di dalam list. File utama (main2.cpp) menjalankan seluruh tahapan penghapusan tersebut untuk menampilkan output akhir sesuai dengan instruksi praktikum.
 
