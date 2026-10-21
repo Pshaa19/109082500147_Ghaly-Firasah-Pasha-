@@ -540,7 +540,7 @@ int main() {
 Program ini mengimplementasikan operasi penghapusan node seperti deleteFirst, deleteLast, dan deleteAfter pada struktur data Singly Linked List. Fungsi nbList dan deleteList digunakan untuk menghitung sisa node serta menghapus seluruh elemen di dalam list. File utama (main2.cpp) menjalankan seluruh tahapan penghapusan tersebut untuk menampilkan output akhir sesuai dengan instruksi praktikum.
 
 ## Kesimpulan
-...
+Implementasi struktur data Singly Linked List menggunakan bahasa pemrograman C++ yang dibagi ke dalam file header, file implementasi, dan program utama. Pada latihan pertama, mahasiswa mempelajari proses penciptaan list, alokasi memori, serta penyisipan elemen di awal (insertFirst) untuk membentuk rangkaian data sesuai ilustrasi modul. Selanjutnya pada latihan kedua, diterapkan berbagai operasi penghapusan node seperti deleteFirst, deleteLast, dan deleteAfter beserta fungsi untuk menghitung jumlah node serta mengosongkan list. Keseluruhan rangkaian latihan ini berhasil melatih pemahaman mahasiswa terhadap manajemen memori dinamis dan manipulasi pointer pada struktur data linier.
 
 ## Referensi
 [1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
