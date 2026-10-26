@@ -551,7 +551,7 @@ int main()
 ### Output Unguided 1 :
 
 ##### Output 
-![Screenshot Output Unguided 1]()
+![Screenshot Output Unguided 1](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%205/output/output%20unguided%201.png)
 
 Program di atas mengimplementasikan Abstract Data Type (ADT) Singly Linked List bertipe data integer yang terbagi ke dalam tiga bagian, yaitu file header (Singlylist.h) untuk deklarasi struktur simpul ElmList, struktur List, serta prototipe fungsi, dan file body (Singlylist.cpp) untuk realisasi algoritmanya. File implementasi tersebut menyediakan operasi dasar yang meliputi pembuatan list kosong (CreateList), alokasi simpul baru di memori dinamis menggunakan operator new (alokasi), penghapusan memori simpul (dealokasi), penyisipan elemen di awal list (insertFirst), serta penelusuran untuk mencetak isi list (printInfo). Pada fungsi main(), program menginisialisasi list kosong L lalu mengalokasikan dan menyisipkan lima elemen (2, 0, 8, 12, dan 9) secara berurutan menggunakan prosedur insertFirst, sehingga elemen yang terakhir disisipkan berada di posisi paling depan dan menghasilkan keluaran 9 12 8 0 2 saat ditampilkan.
 
@@ -672,7 +672,7 @@ int main()
 ### Output Unguided 2 :
 
 ##### Output 
-![Screenshot Output Unguided 2]()
+![Screenshot Output Unguided 2](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%205/output/output%20unguided%202.png)
 
 Program di atas menambahkan operasi pencarian elemen pada ADT Singly Linked List yang dipisahkan ke dalam tiga file, yaitu singlylist2.h sebagai header, singlylist2.cpp sebagai body implementasi, dan main2.cpp sebagai program utama. Fungsi findElm(List L, infotype x) pada file implementasi bekerja dengan menelusuri setiap simpul mulai dari L.First hingga Nil dan mengembalikan alamat memori simpul (address) apabila ditemukan simpul dengan nilai P->info yang sama dengan x. Pada fungsi main(), setelah kelima elemen (9, 12, 8, 0, 2) disisipkan ke dalam list L, program memanggil findElm(L, 8) dan menampilkan pesan "8 ditemukan dalam list" karena alamat simpul yang dikembalikan tidak bernilai Nil.
 
@@ -799,12 +799,12 @@ int main()
 ### Output Unguided 3 :
 
 ##### Output 
-![Screenshot Output Unguided 3]()
+![Screenshot Output Unguided 3](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%205/output/output%20unguided%203.png)
 
 Program di atas menambahkan operasi perhitungan total nilai elemen pada ADT Singly Linked List yang dipisahkan ke dalam tiga file, yaitu singlylist3.h sebagai header, singlylist3.cpp sebagai body implementasi, dan main3.cpp sebagai program utama. Fungsi totalInfo(List L) pada file implementasi bekerja dengan menginisialisasi variabel total = 0, kemudian menelusuri seluruh simpul mulai dari L.First hingga Nil menggunakan perulangan while sembari mengakumulasikan nilai P->info dari setiap simpul. Pada fungsi main(), setelah kelima elemen (9, 12, 8, 0, dan 2) dialokasikan dan disisipkan ke dalam list L, program memanggil fungsi totalInfo(L) sehingga menghasilkan keluaran "Total info dari kelima elemen adalah 31".
 
 ## Kesimpulan
-...
+Berdasarkan praktikum Modul 5 mengenai Singly Linked List (Bagian Kedua), dapat disimpulkan bahwa struktur data senarai berantai tunggal dapat diimplementasikan secara terstruktur sebagai Abstract Data Type (ADT) dengan memisahkan deklarasi tipe serta prototipe fungsi pada file header (*.h), realisasi algoritma pada file body (*.cpp), dan pemanggilan program pada file main.cpp. Pengelolaan elemen di dalam Singly Linked List sangat bergantung pada pemanfaatan pointer (first dan next) serta manajemen memori dinamis melalui proses alokasi (new) dan dealokasi (delete) agar penambahan maupun penghapusan simpul berjalan efisien tanpa menyebabkan kebocoran memori. Operasi pencarian (searching) menggunakan penelusuran sekuensial (traversal) mulai dari simpul pertama hingga Nil terbukti menjadi fondasi penting untuk menemukan elemen berdasarkan nilai data, alamat memori, maupun rentang nilai tertentu sebelum melakukan pembaruan data (update) atau penghapusan pada posisi spesifik. Selain itu, teknik penelusuran yang sama juga memudahkan pemrosesan seluruh elemen di dalam senarai, baik untuk menampilkan isi list (printInfo), menghitung jumlah simpul (nbList), maupun mengakumulasikan total nilai informasi dari seluruh simpul (totalInfo).
 
 ## Referensi
 [1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
