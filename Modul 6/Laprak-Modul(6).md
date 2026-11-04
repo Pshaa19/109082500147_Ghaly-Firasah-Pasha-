@@ -36,10 +36,10 @@ Selain penyisipan dan penghapusan, ADT Doubly Linked List menyediakan operasi pe
 
 ## Guided 
 
-### 1. ...
+### 1. Doublylist
 
 ```C++
-//head
+//header
 #ifndef DOUBLYLIST_H
 #define DOUBLYLIST_H
 #include <string>
@@ -305,46 +305,462 @@ Program di atas mengimplementasikan Abstract Data Type (ADT) Doubly Linked List 
 
 ## Unguided 
 
-### 1. (isi dengan soal unguided 1)
+### 1. Buatlah ADT Doubly Linked list sebagai berikut di dalam file “Doublylist.h”. Buatlah implementasi ADT Doubly Linked list pada file “Doublylist.cpp” dan coba hasil implementasi ADT pada file “main.cpp”. 
 
 ```C++
-source code unguided 1
+//header
+#ifndef DOUBLYLIST_H
+#define DOUBLYLIST_H
+
+#include <iostream>
+#include <string>
+#define Nil NULL
+
+using namespace std;
+
+struct kendaraan {
+    string nopol;
+    string warna;
+    int thnBuat;
+};
+
+typedef kendaraan infotype;
+typedef struct ElmList *address;
+
+struct ElmList {
+    infotype info;
+    address next;
+    address prev;
+};
+
+struct List {
+    address First;
+    address Last;
+};
+
+void CreateList(List &L);
+address alokasi(infotype x);
+void dealokasi(address &P);
+void printInfo(List L);
+void insertLast(List &L, address P);
+bool cekNopol(List L, string nopol);
+
+#endif
+
+//body
+#include "doublylist.h"
+
+void CreateList(List &L) {
+    L.First = Nil;
+    L.Last = Nil;
+}
+
+address alokasi(infotype x) {
+    address P = new ElmList;
+    P->info = x;
+    P->next = Nil;
+    P->prev = Nil;
+    return P;
+}
+
+void dealokasi(address &P) {
+    delete P;
+    P = Nil;
+}
+
+void insertLast(List &L, address P) {
+    if (L.First == Nil) {
+        L.First = P;
+        L.Last = P;
+    } else {
+        P->prev = L.Last;
+        (L.Last)->next = P;
+        L.Last = P;
+    }
+}
+
+bool cekNopol(List L, string nopol) {
+    address P = L.First;
+    while (P != Nil) {
+        if (P->info.nopol == nopol) {
+            return true;
+        }
+        P = P->next;
+    }
+    return false;
+}
+
+void printInfo(List L) {
+    cout << "DATA LIST 1" << endl << endl;
+    address P = L.Last;
+    while (P != Nil) {
+        cout << "no polisi : " << P->info.nopol << endl;
+        cout << "warna     : " << P->info.warna << endl;
+        cout << "tahun     : " << P->info.thnBuat << endl;
+        P = P->prev;
+    }
+}
+
+//main
+#include "doublylist.h"
+
+int main() {
+    List L;
+    CreateList(L);
+
+    for (int i = 0; i < 4; i++) {
+        infotype x;
+        cout << "masukkan nomor polisi: ";
+        cin >> x.nopol;
+        cout << "masukkan warna kendaraan: ";
+        cin >> x.warna;
+        cout << "masukkan tahun kendaraan: ";
+        cin >> x.thnBuat;
+
+        if (cekNopol(L, x.nopol)) {
+            cout << "nomor polisi sudah terdaftar" << endl;
+        } else {
+            address P = alokasi(x);
+            insertLast(L, P);
+        }
+        cout << endl;
+    }
+
+    printInfo(L);
+
+    return 0;
+}
 ```
 ### Output Unguided 1 :
 
 ##### Output 
-![Screenshot Output Unguided 1]()
+![Screenshot Output Unguided 1](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%206/output/output%20unguided%201.png)
 
 Program di atas mengimplementasikan Abstract Data Type (ADT) Doubly Linked List untuk menyimpan data kendaraan (nopol, warna, dan thnBuat) yang dibagi ke dalam tiga file, yaitu doublylist.h sebagai header, doublylist.cpp sebagai body implementasi, dan main_doubly.cpp sebagai program utama. File implementasi menyediakan operasi inisialisasi list kosong (CreateList), manajemen memori dinamis (alokasi dan dealokasi), penyisipan simpul di akhir senarai (insertLast), pengecekan duplikasi nomor polisi (cekNopol), serta pencetakan isi list secara mundur dari L.Last menggunakan pointer prev (printInfo). Pada fungsi main(), program menerima empat masukan data kendaraan secara berurutan, menolak nomor polisi D001 yang dimasukkan ulang karena sudah terdaftar, dan menampilkan ketiga data kendaraan yang valid (D004, D003, dan D001) ke layar.
 
-### 2. (isi dengan soal unguided 2)
+### 2. Carilah elemen dengan nomor polisi D001 dengan membuat fungsi baru. fungsi findElm( L : List, x : infotype ) : address
 
 ```C++
-source code unguided 2
+//header
+#ifndef DOUBLYLIST2_H
+#define DOUBLYLIST2_H
+
+#include <iostream>
+#include <string>
+#define Nil NULL
+
+using namespace std;
+
+struct kendaraan {
+    string nopol;
+    string warna;
+    int thnBuat;
+};
+
+typedef kendaraan infotype;
+typedef struct ElmList *address;
+
+struct ElmList {
+    infotype info;
+    address next;
+    address prev;
+};
+
+struct List {
+    address First;
+    address Last;
+};
+
+void CreateList(List &L);
+address alokasi(infotype x);
+void dealokasi(address &P);
+void printInfo(List L);
+void insertLast(List &L, address P);
+address findElm(List L, infotype x);
+
+#endif
+
+//body
+#include "doublylist2.h"
+
+void CreateList(List &L) {
+    L.First = Nil;
+    L.Last = Nil;
+}
+
+address alokasi(infotype x) {
+    address P = new ElmList;
+    P->info = x;
+    P->next = Nil;
+    P->prev = Nil;
+    return P;
+}
+
+void dealokasi(address &P) {
+    delete P;
+    P = Nil;
+}
+
+void insertLast(List &L, address P) {
+    if (L.First == Nil) {
+        L.First = P;
+        L.Last = P;
+    } else {
+        P->prev = L.Last;
+        (L.Last)->next = P;
+        L.Last = P;
+    }
+}
+
+address findElm(List L, infotype x) {
+    address P = L.First;
+    while (P != Nil) {
+        if (P->info.nopol == x.nopol) {
+            return P;
+        }
+        P = P->next;
+    }
+    return Nil;
+}
+
+void printInfo(List L) {
+    cout << "DATA LIST 1" << endl << endl;
+    address P = L.Last;
+    while (P != Nil) {
+        cout << "no polisi : " << P->info.nopol << endl;
+        cout << "warna     : " << P->info.warna << endl;
+        cout << "tahun     : " << P->info.thnBuat << endl;
+        P = P->prev;
+    }
+}
+
+//main
+#include "doublylist2.h"
+
+int main() {
+    List L;
+    CreateList(L);
+
+    infotype k1 = {"D001", "hitam", 90};
+    infotype k2 = {"D003", "putih", 70};
+    infotype k3 = {"D004", "kuning", 90};
+
+    insertLast(L, alokasi(k1));
+    insertLast(L, alokasi(k2));
+    insertLast(L, alokasi(k3));
+
+    infotype cari;
+    cout << "Masukkan Nomor Polisi yang dicari  : ";
+    cin >> cari.nopol;
+    cout << endl;
+
+    address PFound = findElm(L, cari);
+    if (PFound != Nil) {
+        cout << "Nomor Polisi : " << PFound->info.nopol << endl;
+        cout << "Warna        : " << PFound->info.warna << endl;
+        cout << "Tahun        : " << PFound->info.thnBuat << endl;
+    } else {
+        cout << "Nomor Polisi " << cari.nopol << " tidak ditemukan." << endl;
+    }
+
+    return 0;
+}
 ```
 ### Output Unguided 2 :
 
 ##### Output 
-![Screenshot Output Unguided 2]()
+![Screenshot Output Unguided 2](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%206/output/output%20unguided%202.png)
 
+Program di atas menambahkan fitur pencarian data kendaraan pada ADT Doubly Linked List yang dipisahkan ke dalam tiga file, yaitu doublylist2.h sebagai header, doublylist2.cpp sebagai body implementasi, dan main_doubly2.cpp sebagai program utama. Fungsi findElm(List L, infotype x) pada file implementasi bekerja dengan menelusuri simpul secara sekuensial mulai dari L.First hingga Nil untuk memeriksa apakah atribut nomor polisi (P->info.nopol) sama dengan nomor polisi yang dicari (x.nopol), lalu mengembalikan alamat memori simpul tersebut jika cocok. Pada fungsi main(), setelah data kendaraan (D001, D003, dan D004) dimasukkan ke dalam senarai, program meminta masukan nomor polisi D001 dari pengguna, memanggil findElm(L, cari), dan menampilkan rincian nomor polisi, warna (hitam), serta tahun pembuatan (90) dari kendaraan yang ditemukan.
 
-
-penjelasan unguided 2
-
-### 3. (isi dengan soal unguided 3)
+### 3. Hapus elemen dengan nomor polisi D003 dengan procedure delete. procedure deleteFirst( input/output L : List, P : address ). procedure deleteLast( input/output L : List, P : address ). procedure deleteAfter( input Prec : address, input/output P : address )
 
 ```C++
-source code unguided 3
+//header
+#ifndef DOUBLYLIST3_H
+#define DOUBLYLIST3_H
+
+#include <iostream>
+#include <string>
+#define Nil NULL
+
+using namespace std;
+
+struct kendaraan {
+    string nopol;
+    string warna;
+    int thnBuat;
+};
+
+typedef kendaraan infotype;
+typedef struct ElmList *address;
+
+struct ElmList {
+    infotype info;
+    address next;
+    address prev;
+};
+
+struct List {
+    address First;
+    address Last;
+};
+
+void CreateList(List &L);
+address alokasi(infotype x);
+void dealokasi(address &P);
+void printInfo(List L);
+void insertLast(List &L, address P);
+address findElm(List L, infotype x);
+void deleteFirst(List &L, address &P);
+void deleteLast(List &L, address &P);
+void deleteAfter(address Prec, address &P);
+
+#endif
+
+//body
+#include "doublylist3.h"
+
+void CreateList(List &L) {
+    L.First = Nil;
+    L.Last = Nil;
+}
+
+address alokasi(infotype x) {
+    address P = new ElmList;
+    P->info = x;
+    P->next = Nil;
+    P->prev = Nil;
+    return P;
+}
+
+void dealokasi(address &P) {
+    delete P;
+    P = Nil;
+}
+
+void insertLast(List &L, address P) {
+    if (L.First == Nil) {
+        L.First = P;
+        L.Last = P;
+    } else {
+        P->prev = L.Last;
+        (L.Last)->next = P;
+        L.Last = P;
+    }
+}
+
+address findElm(List L, infotype x) {
+    address P = L.First;
+    while (P != Nil) {
+        if (P->info.nopol == x.nopol) {
+            return P;
+        }
+        P = P->next;
+    }
+    return Nil;
+}
+
+void deleteFirst(List &L, address &P) {
+    if (L.First != Nil) {
+        P = L.First;
+        if (L.First == L.Last) {
+            L.First = Nil;
+            L.Last = Nil;
+        } else {
+            L.First = (L.First)->next;
+            (L.First)->prev = Nil;
+            P->next = Nil;
+        }
+    }
+}
+
+void deleteLast(List &L, address &P) {
+    if (L.Last != Nil) {
+        P = L.Last;
+        if (L.First == L.Last) {
+            L.First = Nil;
+            L.Last = Nil;
+        } else {
+            L.Last = (L.Last)->prev;
+            (L.Last)->next = Nil;
+            P->prev = Nil;
+        }
+    }
+}
+
+void deleteAfter(address Prec, address &P) {
+    if (Prec != Nil && Prec->next != Nil) {
+        P = Prec->next;
+        Prec->next = P->next;
+        if (P->next != Nil) {
+            (P->next)->prev = Prec;
+        }
+        P->prev = Nil;
+        P->next = Nil;
+    }
+}
+
+void printInfo(List L) {
+    cout << "DATA LIST 1" << endl << endl;
+    address P = L.Last;
+    while (P != Nil) {
+        cout << "Nomor Polisi : " << P->info.nopol << endl;
+        cout << "Warna        : " << P->info.warna << endl;
+        cout << "Tahun        : " << P->info.thnBuat << endl;
+        P = P->prev;
+    }
+}
+
+//main
+#include "doublylist3.h"
+
+int main() {
+    List L;
+    CreateList(L);
+
+    infotype k1 = {"D001", "hitam", 90};
+    infotype k2 = {"D003", "putih", 70};
+    infotype k3 = {"D004", "kuning", 90};
+
+    insertLast(L, alokasi(k1));
+    insertLast(L, alokasi(k2));
+    insertLast(L, alokasi(k3));
+
+    infotype hapus;
+    cout << "Masukkan Nomor Polisi yang akan dihapus  : ";
+    cin >> hapus.nopol;
+
+    address PTarget = findElm(L, hapus);
+    if (PTarget != Nil) {
+        address P = Nil;
+        if (PTarget == L.First) {
+            deleteFirst(L, P);
+        } else if (PTarget == L.Last) {
+            deleteLast(L, P);
+        } else {
+            deleteAfter(PTarget->prev, P);
+        }
+        dealokasi(P);
+        cout << "Data dengan nomor polisi " << hapus.nopol << " berhasil dihapus." << endl << endl;
+    } else {
+        cout << "Data dengan nomor polisi " << hapus.nopol << " tidak ditemukan." << endl << endl;
+    }
+
+    printInfo(L);
+
+    return 0;
+}
 ```
 ### Output Unguided 3 :
 
 ##### Output 
-![Screenshot Output Unguided 3]()
+![Screenshot Output Unguided 3](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%206/output/output%20unguided%203.png)
 
-penjelasan unguided 3
+Program di atas menambahkan operasi penghapusan elemen pada ADT Doubly Linked List yang dipisahkan ke dalam tiga file, yaitu doublylist3.h sebagai header, doublylist3.cpp sebagai body implementasi, dan main_doubly3.cpp sebagai program utama. File implementasi menyediakan tiga prosedur penghapusan berdasarkan posisi simpul, yakni deleteFirst untuk melepas elemen pertama, deleteLast untuk melepas elemen terakhir, serta deleteAfter untuk melepas simpul tepat sesudah simpul Prec dengan menyambungkan kembali pointer next dan prev antar-simpul tetangganya. Pada fungsi main(), setelah pengguna memasukkan nomor polisi D003 dan alamatnya ditemukan menggunakan findElm, program menghapus simpul tersebut melalui prosedur deleteAfter(PTarget->prev, P) disertai dealokasi(P), kemudian menampilkan sisa data kendaraan pada DATA LIST 1 (D004 dan D001).
 
 ## Kesimpulan
-...
+Berdasarkan praktikum mengenai Doubly Linked List, dapat disimpulkan bahwa senarai berantai ganda merupakan struktur data dinamis yang setiap simpulnya memiliki dua penunjuk arah, yaitu prev untuk mengacu ke simpul sebelumnya dan next untuk mengacu ke simpul sesudahnya, serta dilengkapi penunjuk First dan Last pada struktur list. Penerapan konsep Abstract Data Type (ADT) yang memisahkan deklarasi tipe dan prototipe pada file header (*.h), realisasi algoritma pada file body (*.cpp), serta pengujian pada file main.cpp membuat pengelolaan data majemuk seperti data kendaraan menjadi lebih modular dan terstruktur. Keberadaan dua pointer pada setiap simpul serta penunjuk Last mempermudah proses penelusuran dua arah (forward maupun backward) dan memungkinkan operasi penyisipan (insertFirst, insertLast, insertAfter, insertBefore) dilakukan secara efisien tanpa harus selalu menelusuri senarai dari awal. Selain itu, perpaduan antara operasi pencarian (findElm) dan penghapusan simpul (deleteFirst, deleteLast, dan deleteAfter) yang diikuti dengan dealokasi terbukti mampu memutus keterkaitan pointer dua arah secara tepat sekaligus menjaga penggunaan memori tetap optimal.
 
 ## Referensi
 [1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSITAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
