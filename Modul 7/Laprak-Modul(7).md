@@ -261,7 +261,7 @@ int main()
 ### Output Unguided 1 :
 
 ##### Output 
-![Screenshot Output Unguided 1_1]()
+![Screenshot Output Unguided 1](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%207/output/output%20unguided%201.png)
 
 Program di atas mengimplementasikan Abstract Data Type (ADT) Stack menggunakan representasi tabel (array statis berukuran 20 elemen bertipe integer) yang dipisahkan ke dalam tiga file, yaitu stack1.h sebagai header, stack1.cpp sebagai body implementasi, dan main.cpp sebagai program utama. File implementasi menyediakan operasi dasar inisialisasi tumpukan kosong (CreateStack dengan S.top = 0), penambahan elemen di puncak tumpukan (push), pengambilan elemen puncak (pop), penampilan isi tumpukan dari posisi TOP (printInfo), serta pembalikan urutan elemen menggunakan stack bantuan sementara (balikStack). Pada fungsi main(), serangkaian operasi Push dan pop dieksekusi secara berurutan hingga menyisakan urutan tumpukan [TOP] 9 2 4 3, yang kemudian dibalik melalui prosedur balikStack(S) sehingga menghasilkan keluaran akhir [TOP] 3 4 2 9.
 
@@ -377,12 +377,11 @@ int main()
 ### Output Unguided 2 :
 
 ##### Output 
-![Screenshot Output Unguided 2_1]()
+![Screenshot Output Unguided 2](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%207/output/output%20unguided%202.png)
 
 Program di atas mengembangkan ADT Stack representasi tabel dengan menambahkan prosedur penyisipan terurut pushAscending yang dipisahkan ke dalam file stack2.h, stack2.cpp, dan main.cpp. Prosedur pushAscending(Stack &S, infotype x) bekerja dengan memindahkan sementara elemen-elemen puncak yang nilainya lebih besar dari x ke dalam stack bantuan temp menggunakan operasi pop dan push, menyisipkan nilai x pada posisi yang tepat, lalu mengembalikan seluruh elemen dari temp kembali ke stack utama S. Pada fungsi main(), keenam nilai (3, 4, 8, 2, 3, 9) yang dimasukkan melalui pushAscending otomatis tersusun secara terurut menjadi [TOP] 9 8 4 3 3 2, dan setelah dibalik menggunakan balikStack(S) menghasilkan keluaran [TOP] 2 3 3 4 8 9.
 
 ### 3. Tambahkan prosedur getInputStream( in/out S : Stack ). Prosedur akan terus membaca dan menerima input user dan memasukkan setiap input ke dalam stack hingga user menekan tombol enter. Contoh: gunakan cin.get() untuk mendapatkan inputan user.
-
 
 ```C++
 //header
@@ -500,7 +499,7 @@ int main()
 ### Output Unguided 3 :
 
 ##### Output 
-![Screenshot Output Unguided 3_1]()
+![Screenshot Output Unguided 3](https://github.com/Pshaa19/109082500147_Ghaly-Firasah-Pasha-/blob/main/Modul%207/output/output%20unguided%203.png)
 
 Program di atas menambahkan prosedur pembacaan aliran karakter getInputStream pada ADT Stack yang dipisahkan ke dalam tiga file, yaitu stack3.h, stack3.cpp, dan main.cpp. Prosedur getInputStream(Stack &S) menggunakan fungsi cin.get() di dalam perulangan while untuk membaca setiap karakter input pengguna secara berurutan hingga tombol Enter ('\n') ditekan, mengonversi setiap karakter angka menjadi nilai integer (c - '0'), lalu memasukkannya satu per satu ke dalam stack melalui prosedur push. Pada fungsi main(), ketika pengguna memasukkan deretan angka 4729601, program menampilkan isi stack sesuai prinsip LIFO yaitu [TOP] 1 0 6 9 2 7 4, kemudian membalik urutannya dengan balikStack(S) sehingga menghasilkan keluaran [TOP] 4 7 2 9 6 0 1.
 
